@@ -1,2 +1,3 @@
-# multi-page-object
+# MultiPageObject
+
 MultiPageObject to rule them all!
