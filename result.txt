@@ -1,0 +1,336 @@
+
+Execution of 1 workers started at 2023-07-09T06:33:39.040Z
+
+2023-07-09T06:33:39.165Z INFO chromedriver: Initiate Chromedriver Launcher (v8.1.1)
+2023-07-09T06:33:39.166Z INFO @wdio/cli:launcher: Run onPrepare hook
+2023-07-09T06:33:39.172Z INFO chromedriver: Start Chromedriver (/Users/xexys/projects/multi-page-object/node_modules/chromedriver/lib/chromedriver/chromedriver) with args --port=9515 --url-base=/
+2023-07-09T06:33:39.229Z INFO chromedriver: Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 9515
+2023-07-09T06:33:39.230Z INFO chromedriver: Only local connections are allowed.
+2023-07-09T06:33:39.230Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+2023-07-09T06:33:39.237Z INFO chromedriver: ChromeDriver was started successfully.
+2023-07-09T06:33:39.315Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2023-07-09T06:33:39.317Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./wdio.conf.ts,--spec,test/specs/example.e2e.ts
+[0-0] 2023-07-09T06:33:41.763Z INFO @wdio/local-runner: Run worker command: run
+[0-0] RUNNING in chrome - file:///test/specs/example.e2e.ts
+[0-0] 2023-07-09T06:33:44.326Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2023-07-09T06:33:44.530Z INFO webdriver: [POST] http://localhost:9515/session
+[0-0] 2023-07-09T06:33:44.530Z INFO webdriver: DATA {
+[0-0]   capabilities: {
+[0-0]     alwaysMatch: { browserName: 'chrome', 'goog:chromeOptions': [Object] },
+[0-0]     firstMatch: [ {} ]
+[0-0]   },
+[0-0]   desiredCapabilities: {
+[0-0]     browserName: 'chrome',
+[0-0]     'goog:chromeOptions': {
+[0-0]       binary: '/Applications/Chromium-114.app/Contents/MacOS/Chromium'
+[0-0]     }
+[0-0]   }
+[0-0] }
+[0-0] 2023-07-09T06:33:48.021Z INFO webdriver: COMMAND navigateTo("https://the-internet.herokuapp.com/login")
+[0-0] 2023-07-09T06:33:48.022Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/url
+[0-0] 2023-07-09T06:33:48.022Z INFO webdriver: DATA { url: 'https://the-internet.herokuapp.com/login' }
+[0-0] 2023-07-09T06:33:50.133Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:50.138Z INFO webdriver: COMMAND findElement("css selector", "body #username")
+[0-0] 2023-07-09T06:33:50.139Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element
+[0-0] 2023-07-09T06:33:50.139Z INFO webdriver: DATA { using: 'css selector', value: 'body #username' }
+[0-0] 2023-07-09T06:33:50.171Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_3'
+[0-0] }
+[0-0] 2023-07-09T06:33:50.188Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve((async (elem, selector) => {
+[0-0]     return elem.matches(selector);
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:50.189Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:50.190Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve((async (elem, selector) => {\n' +
+[0-0]     '    return elem.matches(selector);\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_3',
+[0-0]       ELEMENT: 'FB2979964968801F4F48348315A8BFFA_element_3'
+[0-0]     },
+[0-0]     '*'
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:50.215Z INFO webdriver: RESULT true
+[0-0] 2023-07-09T06:33:50.217Z INFO webdriver: COMMAND elementClick("FB2979964968801F4F48348315A8BFFA_element_3")
+[0-0] 2023-07-09T06:33:50.218Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/FB2979964968801F4F48348315A8BFFA_element_3/click
+[0-0] 2023-07-09T06:33:50.479Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:50.480Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve(((elem) => {
+[0-0]     if (!(elem instanceof HTMLInputElement || elem instanceof HTMLTextAreaElement)) {
+[0-0]         const elemStr = Object.prototype.toString.call(elem);
+[0-0]         throw new Error(`Element '${elemStr}' must be instance of HTMLInputElement or HTMLTextAreaElement!`);
+[0-0]     }
+[0-0]     if (elem.value.length) {
+[0-0]         elem.setSelectionRange(0, elem.value.length);
+[0-0]     }
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:50.481Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:50.481Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve(((elem) => {\n' +
+[0-0]     '    if (!(elem instanceof HTMLInputElement || elem instanceof HTMLTextAreaElement)) {\n' +
+[0-0]     '        const elemStr = Object.prototype.toString.call(elem);\n' +
+[0-0]     "        throw new Error(`Element '${elemStr}' must be instance of HTMLInputElement or HTMLTextAreaElement!`);\n" +
+[0-0]     '    }\n' +
+[0-0]     '    if (elem.value.length) {\n' +
+[0-0]     '        elem.setSelectionRange(0, elem.value.length);\n' +
+[0-0]     '    }\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_3',
+[0-0]       ELEMENT: 'FB2979964968801F4F48348315A8BFFA_element_3'
+[0-0]     }
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:50.506Z INFO webdriver: RESULT null
+[0-0] FFF
+[0-0] 2023-07-09T06:33:50.508Z INFO webdriver: COMMAND elementSendKeys("FB2979964968801F4F48348315A8BFFA_element_3", "<Screenshot[base64]>")
+[0-0] 2023-07-09T06:33:50.509Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/FB2979964968801F4F48348315A8BFFA_element_3/value
+[0-0] 2023-07-09T06:33:50.509Z INFO webdriver: DATA { text: 'tomsmith' }
+[0-0] 2023-07-09T06:33:50.659Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:50.661Z INFO webdriver: COMMAND findElement("css selector", "body #password")
+[0-0] 2023-07-09T06:33:50.662Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element
+[0-0] 2023-07-09T06:33:50.662Z INFO webdriver: DATA { using: 'css selector', value: 'body #password' }
+[0-0] 2023-07-09T06:33:50.690Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_4'
+[0-0] }
+[0-0] 2023-07-09T06:33:50.698Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve((async (elem, selector) => {
+[0-0]     return elem.matches(selector);
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:50.698Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:50.699Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve((async (elem, selector) => {\n' +
+[0-0]     '    return elem.matches(selector);\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_4',
+[0-0]       ELEMENT: 'FB2979964968801F4F48348315A8BFFA_element_4'
+[0-0]     },
+[0-0]     '*'
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:50.725Z INFO webdriver: RESULT true
+[0-0] 2023-07-09T06:33:50.725Z INFO webdriver: COMMAND elementClick("FB2979964968801F4F48348315A8BFFA_element_4")
+[0-0] 2023-07-09T06:33:50.726Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/FB2979964968801F4F48348315A8BFFA_element_4/click
+[0-0] 2023-07-09T06:33:50.829Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:50.830Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve(((elem) => {
+[0-0]     if (!(elem instanceof HTMLInputElement || elem instanceof HTMLTextAreaElement)) {
+[0-0]         const elemStr = Object.prototype.toString.call(elem);
+[0-0]         throw new Error(`Element '${elemStr}' must be instance of HTMLInputElement or HTMLTextAreaElement!`);
+[0-0]     }
+[0-0]     if (elem.value.length) {
+[0-0]         elem.setSelectionRange(0, elem.value.length);
+[0-0]     }
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:50.831Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:50.831Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve(((elem) => {\n' +
+[0-0]     '    if (!(elem instanceof HTMLInputElement || elem instanceof HTMLTextAreaElement)) {\n' +
+[0-0]     '        const elemStr = Object.prototype.toString.call(elem);\n' +
+[0-0]     "        throw new Error(`Element '${elemStr}' must be instance of HTMLInputElement or HTMLTextAreaElement!`);\n" +
+[0-0]     '    }\n' +
+[0-0]     '    if (elem.value.length) {\n' +
+[0-0]     '        elem.setSelectionRange(0, elem.value.length);\n' +
+[0-0]     '    }\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_4',
+[0-0]       ELEMENT: 'FB2979964968801F4F48348315A8BFFA_element_4'
+[0-0]     }
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:50.856Z INFO webdriver: RESULT null
+[0-0] FFF
+[0-0] 2023-07-09T06:33:50.856Z INFO webdriver: COMMAND elementSendKeys("FB2979964968801F4F48348315A8BFFA_element_4", "SuperSecretPassword!")
+[0-0] 2023-07-09T06:33:50.857Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/FB2979964968801F4F48348315A8BFFA_element_4/value
+[0-0] 2023-07-09T06:33:50.857Z INFO webdriver: DATA { text: 'SuperSecretPassword!' }
+[0-0] 2023-07-09T06:33:50.937Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:50.938Z INFO webdriver: COMMAND findElement("css selector", "body button[type="submit"]")
+[0-0] 2023-07-09T06:33:50.938Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element
+[0-0] 2023-07-09T06:33:50.939Z INFO webdriver: DATA { using: 'css selector', value: 'body button[type="submit"]' }
+[0-0] 2023-07-09T06:33:50.970Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_8'
+[0-0] }
+[0-0] 2023-07-09T06:33:50.975Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve((async (elem, selector) => {
+[0-0]     return elem.matches(selector);
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:50.976Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:50.976Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve((async (elem, selector) => {\n' +
+[0-0]     '    return elem.matches(selector);\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'FB2979964968801F4F48348315A8BFFA_element_8',
+[0-0]       ELEMENT: 'FB2979964968801F4F48348315A8BFFA_element_8'
+[0-0]     },
+[0-0]     '*'
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:50.998Z INFO webdriver: RESULT true
+[0-0] 2023-07-09T06:33:50.999Z INFO webdriver: COMMAND elementClick("FB2979964968801F4F48348315A8BFFA_element_8")
+[0-0] 2023-07-09T06:33:50.999Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/FB2979964968801F4F48348315A8BFFA_element_8/click
+[0-0] 2023-07-09T06:33:51.554Z INFO webdriver: RESULT null
+[0-0] 2023-07-09T06:33:51.557Z INFO webdriver: COMMAND findElement("css selector", "body #flash")
+[0-0] 2023-07-09T06:33:51.557Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element
+[0-0] 2023-07-09T06:33:51.558Z INFO webdriver: DATA { using: 'css selector', value: 'body #flash' }
+[0-0] 2023-07-09T06:33:51.584Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'CE7511B749DA073746727A7A3B5F0653_element_11'
+[0-0] }
+[0-0] 2023-07-09T06:33:51.590Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve((async (elem, selector) => {
+[0-0]     return elem.matches(selector);
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:51.590Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:51.590Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve((async (elem, selector) => {\n' +
+[0-0]     '    return elem.matches(selector);\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'CE7511B749DA073746727A7A3B5F0653_element_11',
+[0-0]       ELEMENT: 'CE7511B749DA073746727A7A3B5F0653_element_11'
+[0-0]     },
+[0-0]     '*'
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:51.611Z INFO webdriver: RESULT true
+[0-0] 2023-07-09T06:33:51.614Z INFO webdriver: COMMAND findElements("css selector", "body #flash")
+[0-0] 2023-07-09T06:33:51.614Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/elements
+[0-0] 2023-07-09T06:33:51.614Z INFO webdriver: DATA { using: 'css selector', value: 'body #flash' }
+[0-0] 2023-07-09T06:33:51.641Z INFO webdriver: RESULT [
+[0-0]   {
+[0-0]     'element-6066-11e4-a52e-4f735466cecf': 'CE7511B749DA073746727A7A3B5F0653_element_11'
+[0-0]   }
+[0-0] ]
+[0-0] 2023-07-09T06:33:51.654Z INFO webdriver: COMMAND findElement("css selector", "body #flash")
+[0-0] 2023-07-09T06:33:51.654Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element
+[0-0] 2023-07-09T06:33:51.655Z INFO webdriver: DATA { using: 'css selector', value: 'body #flash' }
+[0-0] 2023-07-09T06:33:51.671Z INFO webdriver: RESULT {
+[0-0]   'element-6066-11e4-a52e-4f735466cecf': 'CE7511B749DA073746727A7A3B5F0653_element_11'
+[0-0] }
+[0-0] 2023-07-09T06:33:51.676Z INFO webdriver: COMMAND executeAsyncScript("
+[0-0]             const args = Array.from(arguments); 
+[0-0]             const params = args.slice(0, args.length - 1);
+[0-0]             const done = args[args.length - 1];
+[0-0]             return Promise.resolve((async (elem, selector) => {
+[0-0]     return elem.matches(selector);
+[0-0] }).apply(null, params)).then(done);
+[0-0]         ", <object>)
+[0-0] 2023-07-09T06:33:51.676Z INFO webdriver: [POST] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/execute/async
+[0-0] 2023-07-09T06:33:51.677Z INFO webdriver: DATA {
+[0-0]   script: '\n' +
+[0-0]     '            const args = Array.from(arguments); \n' +
+[0-0]     '            const params = args.slice(0, args.length - 1);\n' +
+[0-0]     '            const done = args[args.length - 1];\n' +
+[0-0]     '            return Promise.resolve((async (elem, selector) => {\n' +
+[0-0]     '    return elem.matches(selector);\n' +
+[0-0]     '}).apply(null, params)).then(done);\n' +
+[0-0]     '        ',
+[0-0]   args: [
+[0-0]     {
+[0-0]       'element-6066-11e4-a52e-4f735466cecf': 'CE7511B749DA073746727A7A3B5F0653_element_11',
+[0-0]       ELEMENT: 'CE7511B749DA073746727A7A3B5F0653_element_11'
+[0-0]     },
+[0-0]     '*'
+[0-0]   ]
+[0-0] }
+[0-0] 2023-07-09T06:33:51.693Z INFO webdriver: RESULT true
+[0-0] 2023-07-09T06:33:51.694Z INFO webdriver: COMMAND getElementText("CE7511B749DA073746727A7A3B5F0653_element_11")
+[0-0] 2023-07-09T06:33:51.695Z INFO webdriver: [GET] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8/element/CE7511B749DA073746727A7A3B5F0653_element_11/text
+[0-0] 2023-07-09T06:33:51.735Z INFO webdriver: RESULT You logged into a secure area!
+[0-0] ×
+[0-0] 2023-07-09T06:33:51.747Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2023-07-09T06:33:51.747Z INFO webdriver: [DELETE] http://localhost:9515/session/360b4c2b1c87ebd86cbe1898851bc9d8
+[0-0] 2023-07-09T06:33:51.804Z INFO webdriver: RESULT null
+[0-0] FAILED in chrome - file:///test/specs/example.e2e.ts
+2023-07-09T06:33:51.946Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2023-07-09T06:33:51.947Z INFO @wdio/cli:launcher: Run onComplete hook
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome 114.0.5735.0 mac os x #0-0] Running: chrome (v114.0.5735.0) on mac os x
+[chrome 114.0.5735.0 mac os x #0-0] Session ID: 360b4c2b1c87ebd86cbe1898851bc9d8
+[chrome 114.0.5735.0 mac os x #0-0]
+[chrome 114.0.5735.0 mac os x #0-0] » /test/specs/example.e2e.ts
+[chrome 114.0.5735.0 mac os x #0-0] My Login application
+[chrome 114.0.5735.0 mac os x #0-0]    ✓ should login with valid credentials
+[chrome 114.0.5735.0 mac os x #0-0]    ✖ "after each" hook for "should login with valid credentials"
+[chrome 114.0.5735.0 mac os x #0-0]
+[chrome 114.0.5735.0 mac os x #0-0] 1 passing (3.8s)
+[chrome 114.0.5735.0 mac os x #0-0] 1 failing
+[chrome 114.0.5735.0 mac os x #0-0]
+[chrome 114.0.5735.0 mac os x #0-0] 1) My Login application "after each" hook for "should login with valid credentials"
+[chrome 114.0.5735.0 mac os x #0-0] Cannot read properties of undefined (reading 'navigator')
+[chrome 114.0.5735.0 mac os x #0-0] TypeError: Cannot read properties of undefined (reading 'navigator')
+[chrome 114.0.5735.0 mac os x #0-0]     at resetClipboardStubOnView (/Users/xexys/projects/multi-page-object/node_modules/@testing-library/user-event/dist/cjs/utils/dataTransfer/Clipboard.js:107:32)
+[chrome 114.0.5735.0 mac os x #0-0]     at Context.<anonymous> (/Users/xexys/projects/multi-page-object/node_modules/@testing-library/user-event/dist/cjs/utils/dataTransfer/Clipboard.js:147:30)
+
+
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:12 
+
+2023-07-09T06:33:51.949Z INFO @wdio/local-runner: Shutting down spawned worker
+2023-07-09T06:33:52.201Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2023-07-09T06:33:52.201Z INFO @wdio/local-runner: shutting down

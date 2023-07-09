@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BasePageObject unit testing!</title>
+</head>
+<body>
+    <div id="create-po-by-root">
+        <div class="foo">foo</div>
+    </div>
+
+    <div id="create-po-by-selector">
+        <div class="foo">foo</div>
+    </div>
+
+    <div id="create-po-by-parent-and-index">
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="create-po-by-parent-and-mapper">
+        <div class="bar">bar</div>
+        <div class="baz">baz</div>
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="create-by-parent-and-selector-and-index">
+        <div class="bar">bar</div>
+        <div class="baz">baz</div>
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="create-by-parent-and-selector-and-mapper">
+        <div class="bar">bar</div>
+        <div class="baz">baz</div>
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="get-po-by-ctor">
+        <div class="foo">foo</div>
+    </div>
+
+    <div id="get-po-by-ctor-and-index">
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="get-po-by-ctor-and-selector">
+        <div class="foo">foo-1</div>
+        <div class="foo custom">foo-2</div>
+    </div>
+
+    <div id="get-po-by-ctor-and-mapper">
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="get-po-by-ctor-and-selector-and-index">
+        <div class="bar">bar</div>
+        <div class="baz">baz</div>
+        <div class="foo">foo-1</div>
+        <div class="foo">foo-2</div>
+    </div>
+
+    <div id="get-po-by-ctor-and-selector-and-mapper">
+        <div class="foo">foo-1</div>
+        <div class="bar">bar</div>
+        <div class="foo" style="color: red">foo-2</div>
+        <div class="baz">baz</div>
+        <div class="foo" style="color: red">foo-3</div>
+    </div>
+
+    <div id="get-po-from-nested-structure">
+        <div class="foo">
+            <div class="bar">
+                <div class="baz">baz-1-1-1</div>
+                <div class="baz">baz-1-1-2</div>
+                <div class="baz">baz-1-1-3</div>
+            </div>
+            <div class="bar">
+                <div class="baz">baz-1-2-1</div>
+                <div class="baz">baz-1-2-2</div>
+                <div class="baz">baz-1-2-3</div>
+            </div>
+        </div>
+        <div class="foo">
+            <div class="bar">
+                <div class="baz">baz-2-1-1</div>
+                <div class="baz">baz-2-1-2</div>
+                <div class="baz">baz-2-1-3</div>
+            </div>
+            <div class="bar">
+                <div class="baz">baz-2-2-1</div>
+                <div class="baz">baz-2-2-2</div>
+                <div class="baz">baz-2-2-3</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="root-element-must-match-specific-selector-error">
+        <div class="foooooooo">foo</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BasePageObject Выбросил исключение если, root элемент найден, но он не соответствует root селектору 1`] = `"Root element 'HTMLDivElement(<div class="foooooooo"></div>)' must match specific selector '.foo'!"`;
+
+exports[`BasePageObject Выбросил исключение если, root элемент не найден, при обращении к полю root 1`] = `
+"Root element not found!
+
+    Search steps:
+        - get elements by querySelectorAll (container: [object JSDomBrowser], query: '#get-po-from-nested-structure .foo', resultElementsCount: 2)
+        - get element by index (index: 1, resultElement: HTMLDivElement(<div class="foo"></div>))
+        - get elements by querySelectorAll (container: HTMLDivElement(<div class="foo"></div>), query: '.bar', resultElementsCount: 2)
+        - get element by index (index: 0, resultElement: HTMLDivElement(<div class="bar"></div>))
+        - get elements by querySelectorAll (container: HTMLDivElement(<div class="bar"></div>), query: '.baz', resultElementsCount: 3)
+        - get element by mapper (mapper: 'getByIndexMapper', resultElement: undefined, debugParams: {"index":10})"
+`;
+
+exports[`BasePageObject Выбросил исключение если, при определении класса не задано статическое поле rootSelector 1`] = `"Value 'undefined' of 'PO.rootSelector' must not be empty!"`;
+
+exports[`BasePageObject Выбросил исключение если, при определении класса статическое поле rootSelector задано как falsy значение 1`] = `"Value '' of 'PO.rootSelector' must not be empty!"`;
+
+exports[`BasePageObject Выбросил исключение если, при определении класса статическое поле rootSelector задано, но не является строкой 1`] = `"Value '[object Object]' of 'PO.rootSelector' must be valid CSS selector string!"`;
