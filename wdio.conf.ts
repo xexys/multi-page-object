@@ -65,8 +65,8 @@ export const config: Options.Testrunner = {
         // capabilities for local browser web tests
         browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
         'goog:chromeOptions': {
-            // args: process.env.CI ? ['headless', 'disable-gpu'] : []
-            binary: '/Applications/Chromium-114.app/Contents/MacOS/Chromium'
+            binary: '/Applications/Chromium-114.app/Contents/MacOS/Chromium',
+            args: process.env.CI ? ['headless', 'disable-gpu'] : [],
         }
     }],
     //
