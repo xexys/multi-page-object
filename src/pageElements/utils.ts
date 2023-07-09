@@ -34,7 +34,7 @@ export const toObjectString = (value: unknown): string => {
  * @example
  *  'HTMLHtmlElement(<html></html>)'
  *  'HTMLDivElement(<div class="foo"></div>)'
- *  'HTMLAnchorElement(<a href="https://yandex.ru"></a>)'
+ *  'HTMLAnchorElement(<a href="https://google.com"></a>)'
  *
  * @example
  *  '{"selector":"div > span[role=\\"button\\"]", "value": {"ELEMENT": "0.9185432174242962-3"}}'

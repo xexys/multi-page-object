@@ -2,6 +2,7 @@
     "compilerOptions": {
         "baseUrl": "./",
         "esModuleInterop": true,
+        "experimentalDecorators": true,
         "moduleResolution": "node",
         "module": "commonjs",
         "types": [

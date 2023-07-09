@@ -51,9 +51,8 @@ export class WebdriverIOBrowser extends BaseBrowser {
     }
 
     /**
-     * В отличие от yaExecute корректно сериализует/десериализует значения аргументов
+     * Корректно сериализует/десериализует значения аргументов
      * (WebdriverIO.Element в Element и обратно) при выполнении callback ф-ии.
-     * @see https://a.yandex-team.ru/arcadia/market/front/libs/webdriver-io-commands/lib/yaExecute.js?rev=r10928816#L13
      */
     protected async _executeCallback<P extends unknown[], R>(fn: (...args: P) => R, ...args: P): Promise<R> {
         const script = `

@@ -1,12 +1,8 @@
-import { browser, $, $$ } from '@wdio/globals'
 import {LoginPage} from '../pageobjects/login.page'
 import {SecurePage} from '../pageobjects/secure.page'
 import {E2ETestContext, setGlobalTestContext} from "../../src";
 
-Object.assign(browser, {$, $$});
-const context = new E2ETestContext(browser);
-
-setGlobalTestContext(context);
+setGlobalTestContext(new E2ETestContext());
 
 const loginPage = new LoginPage();
 const securePage = new SecurePage();

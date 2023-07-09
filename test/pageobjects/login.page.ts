@@ -1,4 +1,4 @@
-import { ChainablePromiseElement } from 'webdriverio';
+import {step} from '../../src';
 
 import Page from './page';
 
@@ -25,6 +25,7 @@ export class LoginPage extends Page {
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
+    @step('Логин!')
     public async login (username: string, password: string) {
         await (await this.inputUsername.rootElement).typeValue(username);
         await (await this.inputPassword.rootElement).typeValue(password);

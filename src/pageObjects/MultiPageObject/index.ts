@@ -1,5 +1,3 @@
-import type {WEP} from '@yandex-market/ginny';
-
 import {toDOMElement, toWebElementPromise} from '../../adapters';
 import {waitFor, waitForNot} from '../../utils';
 import type {WaitForOptions} from '../../utils';
@@ -9,6 +7,7 @@ import type {RootElementSelector} from '../../locators';
 import {BasePageObject} from '../BasePageObject';
 import type {PageObjectCtorLocatorArg, PageObjectCtor} from '../BasePageObject';
 import {isPageObjectCtor} from '../utils';
+import {WebdriverIOElementPromise} from "../../browsers";
 
 /**
  * Базовый абстрактный класс для создания PageObject-объектов для работы с элементами в тестах.
@@ -25,11 +24,7 @@ export abstract class MultiPageObject<T extends Element = HTMLElement> extends B
         return toDOMElement(this);
     }
 
-    public toWEP(): WEP {
-        return toWEP(this);
-    }
-
-    public toWebElementPromise(): WEP {
+    public toWebElementPromise(): WebdriverIOElementPromise {
         return toWebElementPromise(this);
     }
 

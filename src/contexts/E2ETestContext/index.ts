@@ -1,23 +1,35 @@
 import assert from 'assert';
-
+import {browser as wdioBrowser, $, $$} from '@wdio/globals'
+import allureReporter from '@wdio/allure-reporter'
+import {Status} from "allure-js-commons";
 
 import {WebdriverIOBrowser} from '../../browsers';
-import type {WebdriverIOBrowserAPI} from '../../browsers';
 import {AllureReporter} from '../../reporters';
 import {TestContext} from '../TestContext';
 
+Object.assign(wdioBrowser, {$, $$});
+
+const allure = {
+    runStep: async (name, fn) => {
+        allureReporter.startStep(name);
+
+        try {
+            await fn();
+            allureReporter.endStep(Status.PASSED)
+        } catch (error) {
+            allureReporter.endStep(Status.BROKEN)
+        }
+    }
+};
+
 export class E2ETestContext extends TestContext {
-    constructor(wdioBrowser: WebdriverIOBrowserAPI) {
-        const allure = global.allure;
-
+    constructor() {
         const browser = new WebdriverIOBrowser(wdioBrowser);
-
         const reporter = new AllureReporter(allure);
 
         /**
          * Актуальное значение для таймаута будет выставлено согласно настройкам окружения, в котором выполняются тесты.
          * @see https://github.com/gemini-testing/hermione/tree/v3.13.0#waittimeout
-         * @see https://a.yandex-team.ru/arcadia/market/front/apps/partner/configs/ginny/partner.common/.hermione.conf.js?rev=r11075249#L32
          *
          * Как минимум, должно быть дефолтное значение, выставляемое WebdriverIO.
          * @see https://github.com/webdriverio/webdriverio/blob/v4.13.2/lib/webdriverio.js#L44-L45
